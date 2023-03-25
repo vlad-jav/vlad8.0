@@ -83,7 +83,7 @@ public class Main {
         int counter =0;
 
         while (deposit < total){
-            deposit = deposit + percent +deposit /100;
+            deposit = deposit + percent * deposit /100;
             counter++;
             System.out.println(" месяц "+ counter + " сумма накоплений равна"+ deposit + " рублей ");;
         }
@@ -98,8 +98,8 @@ public class Main {
         int period =10;
         int counter =0;
 
-        while (counter <= period ){
-            population = population + (birthRate - deathRate ) * population /100;
+        while (counter < period ){
+            population = population + (birthRate - deathRate ) * population /1000;
             counter++;
             System.out.println(" Год  " + counter +  " численность населения  составляет  " + population );
         }
